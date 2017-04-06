@@ -9,6 +9,9 @@
 
 namespace hmphu\payoneer\request;
 
+use hmphu\payoneer\PartnerDetails;
+use hmphu\payoneer\PayeeDetails;
+
 /**
  * Class PayeeSignupAutoPopulationRequest
  * @package hmphu\payoneer\request
@@ -43,7 +46,7 @@ class PayeeSignupAutoPopulationRequest extends RequestAbstract implements Reques
         $details = (array)$this->partnerDetails;
         $personalDetails = (array)$this->payeeDetails;
         $xmlArray = ['Details' => $details, 'PersonalDetails' => $personalDetails, ];
-        $xml = Verdant\Array2XML::createXML('PayoneerDetails', $xmlArray);
+        $xml = \Verdant\Array2XML::createXML('PayoneerDetails', $xmlArray);
         return $xml->saveXML();
     }
 }

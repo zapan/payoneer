@@ -47,7 +47,6 @@ class PayeeSignupRequest extends RequestAbstract implements RequestInterface {
         $this->parameters['p8']  = $redirectTime;
         $this->parameters['p9']  = $testAccount;
         $this->parameters['p10'] = $xmlResponse;
-        $this->parameters['p11'] = implode(',', $payoutMethods);
         $this->parameters['p12'] = $achMode;
     }
 }

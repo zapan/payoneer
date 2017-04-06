@@ -53,7 +53,7 @@ class PayoneerApi extends ApiAbstract
      */
     public function getTokenXML(request\PayeeSignupAutoPopulationRequest $request) {
     	$this->call('GetTokenXML', $request);
-    	$response = new \response\PayeeSignupAutoPopulationResponse($this->response);
+    	$response = new response\PayeeSignupAutoPopulationResponse($this->response);
     	return $response->getData()['Token'];
     }
     
